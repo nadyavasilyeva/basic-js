@@ -19,8 +19,11 @@ function createDreamTeam(members) {
   }
   let dreamTeamName = [];
   for (let i = 0; i < members.length; i++) {
-    if (typeof members[i] === 'string') {
-      let firstLetter = members[i].charAt(0).toUpperCase().replace(/[\s.,%]/g, '');
+    if (typeof(members[i]) === ' ') {
+      members[i].replace(/[\s.,%]/g, '');
+    }
+    else if (typeof members[i] === 'string') {
+      let firstLetter = members[i].charAt(0).toUpperCase();
       dreamTeamName.push(firstLetter);
     }
   }
